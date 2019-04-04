@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class TransformPacket : MessageBase {
 
-    public static short msgID = (short)GameMessageID.TransformPacket;
+    public static short msgID = (short)GameMessageID.PlayersReady;
     public TransformPacket()
     {
         m_position = Vector3.zero;

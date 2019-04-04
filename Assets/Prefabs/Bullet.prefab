@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 23716016011982050}
   - component: {fileID: 54133605932818762}
   - component: {fileID: 114568364342770242}
-  - component: {fileID: 114020774540291742}
   - component: {fileID: 114626383919455672}
+  - component: {fileID: 114638031306756082}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -102,21 +102,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114020774540291742
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1581631813549484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a7c3868b09c8fb44a776d0b3a2625e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BulletSpeed: 15
-  BulletDamage: 25
-  WeaponFireRate: 3
-  BulletLifetime: 3
 --- !u!114 &114568364342770242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,6 +155,21 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114638031306756082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581631813549484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a7c3868b09c8fb44a776d0b3a2625e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletSpeed: 10
+  BulletDamage: 5
+  WeaponFireRate: 3
+  BulletLifetime: 3
 --- !u!135 &135291570396579896
 SphereCollider:
   m_ObjectHideFlags: 1

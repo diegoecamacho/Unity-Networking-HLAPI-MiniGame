@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class BulletBase : MonoBehaviour {
+public class BulletBase : MonoBehaviour
+{
 
     public int BulletSpeed = 1;
     public int BulletDamage = 5;
@@ -14,7 +15,7 @@ public class BulletBase : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerController>().TakeDamage(BulletDamage);
+            //collision.gameObject.GetComponent<PlayerController>().TakeDamage(BulletDamage);
         }
 
         Destroy(gameObject);

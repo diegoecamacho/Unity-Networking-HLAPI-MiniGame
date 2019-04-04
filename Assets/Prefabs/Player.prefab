@@ -69,6 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224901622747330958}
   - component: {fileID: 114348477385056116}
+  - component: {fileID: 114192456378659706}
   m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
@@ -90,7 +91,7 @@ GameObject:
   - component: {fileID: 114921641307426692}
   - component: {fileID: 54794848136494610}
   - component: {fileID: 114517574693673324}
-  - component: {fileID: 114454547714492724}
+  - component: {fileID: 114046898007370368}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -204,7 +205,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1226229330869378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2908192, y: 2.4886389, z: -5.597924}
+  m_LocalPosition: {x: 7.41, y: 1.94, z: 1.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4132325965857056}
@@ -372,7 +373,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -401,6 +402,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114046898007370368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1226229330869378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5cd1334de3582b4da36e46fd3f369b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
+  MovementSpeed: 1000
+  RotationSpeed: 250
+  bulletPrefab: {fileID: 1581631813549484, guid: 3a147540a6b5c094fb17406ff6acd978,
+    type: 2}
+  bulletSpawn: {fileID: 4720480381368730}
+  m_currentPositionUpdateTime: 0
+  m_positionUpdateTime: 0.5
+  playerHealthSlider: {fileID: 114348477385056116}
 --- !u!114 &114075665138096334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,6 +438,17 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114192456378659706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1172109603834426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3d45fd150cfea640afa0d8c6192a7c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114225238861105862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -476,23 +508,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114454547714492724
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1226229330869378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5cd1334de3582b4da36e46fd3f369b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  MovementSpeed: 5
-  bulletPrefab: {fileID: 1581631813549484, guid: 3a147540a6b5c094fb17406ff6acd978,
-    type: 2}
-  bulletSpawn: {fileID: 4720480381368730}
-  playerHealthSlider: {fileID: 114348477385056116}
 --- !u!114 &114517574693673324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -505,14 +520,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 3
-  m_SendInterval: 0.07692308
+  m_SendInterval: 0.033333335
   m_SyncRotationAxis: 2
   m_RotationSyncCompression: 0
   m_SyncSpin: 1
   m_MovementTheshold: 0.001
   m_VelocityThreshold: 0.0001
   m_SnapThreshold: 5
-  m_InterpolateRotation: 1
+  m_InterpolateRotation: 5
   m_InterpolateMovement: 1
 --- !u!114 &114638553399474584
 MonoBehaviour:
